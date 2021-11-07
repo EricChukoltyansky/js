@@ -30,18 +30,18 @@ b)string
 
 //create three different ways to declare variables
 
-let;
-var;
-const;
+// let
+// var
+// const
 
 //declare a variable and reassign a value to it
 
-let a = '5';
-const a = '6';
+// let a = '5';
+// const a = '6';
 
 //create a variable and after that assign a string with its value being: He's got it!
 
-var str = "He's got it!"
+// var str = "He's got it!";
 
 /*
 1. create a variable and assign a value on how much a restaurant bill is.
@@ -59,7 +59,9 @@ console.log(totalBill);
 
 // Round the number 50.6 to its nearest integer
 
-let roundInt = round(50.6);
-console.log(roundInt);
+
+console.log(Math.round(50.6));
 
 //Create a variable that is undefined
+
+console.log(hklhlhk);
