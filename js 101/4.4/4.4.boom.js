@@ -11,4 +11,7 @@ let sevenBoom = function(n){
     return n
 }
 
-console.log(sevenBoom(3))
+console.log(sevenBoom(3));
+console.log(sevenBoom(77));
+console.log(sevenBoom(534));
+console.log(sevenBoom(537));
