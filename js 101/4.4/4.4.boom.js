@@ -1,13 +1,14 @@
 // let n=[];
 
 let sevenBoom = function(n){
-    let check = n.includes(7);
+    let check = n.toString().includes(7);
     if(check){
         console.log("BOOM");
     }
-    else if(n%7===0 && n.String.prototype.includes(7)){
+    else if(n%7===0 && n.toString().includes("7")){
         console.log('BOOM')
     }
+    else {console.log("NOT BOOM!")}
     return n
 }
 
