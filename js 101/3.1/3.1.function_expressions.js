@@ -15,9 +15,7 @@
 //     return welcome;
 // }
 
-const welcome = () => {
-  "Welcome to appleseeds Bootcamp!";
-};
+const welcome = () => {'Welcome to appleseeds Bootcamp!'}
 
 // function power(a) {
 //     let myNumber = a;
@@ -25,19 +23,17 @@ const welcome = () => {
 //     return result;
 // }
 
-const power = (a) => {
-  Math.pow(a, 2);
-};
+const power = a => { Math.pow(a,2)}
 
 // From function expressions to IIFE functions.
 // const squareRoot = a => Math.sqrt(a);
 
 function squareRoot(a) {
-  return Math.sqrt(a);
+    return Math.sqrt(a)
 }
 
 // const randomNumbers = (a, b) => Math.random() * (a - b) + b;
 
-function randomNumbers(a, b) {
-  return Math.random() * (a - b) + b;
+function randomNumbers(a,b) {
+    return Math.random()*(a-b) + b;
 }
