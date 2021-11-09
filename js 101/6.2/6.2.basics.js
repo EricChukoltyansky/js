@@ -2,15 +2,15 @@ const people = ["Greg", "Mary", "Devon" ,"James"];
 
 // 1 
 for(let i of people) {
-    console.log(people[i])
+    console.log(i)
 }
 
 // 2
-let removedElem = people.shift();
+let removedElem = people.shift("Greg");
 console.log(removedElem)
 
 // 3
-let removedElem2 = people.pop();
+let removedElem2 = people.pop("James");
 console.log(removedElem2);
 
 // 4
