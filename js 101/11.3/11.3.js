@@ -43,13 +43,24 @@ const data = [
 
 
 // 1
-   let returnName = () => {
-       data.map(el => {
-           return console.log(el.name)
-       })
-   }
+//    let returnName = () => {
+//        data.join("")
+//        data.map(el => {
+//            return console.log(el.name)
+//        })
+//    }
 
-   console.log(returnName());
+//    console.log(returnName());
 
 // 2
-   
+   let before1990 = () => {
+       result = []
+       data.forEach(el => {
+           if(parseInt(el.birthday.slice(-4)) < 1990) {
+            result.push(el)
+           }
+       })
+       return result
+   }
+
+   console.log(before1990())
