@@ -57,18 +57,18 @@ let findPerson = (type, id) => {
 // the teachers are in full capacity log to the console “Sorry,
 // no available teachers left”.
 
-// school.assignStudent = (studentId, subject) => {
-//   const teacher = school.teachers.find((teacher) => {
-//     return teacher.subjects.includes(subject);
-//   });
-//   console.log(teacher);
-//   if (teacher.capacityLeft > 0) {
-//     teacher.students.push(studentId);
-//     teacher.capacityLeft--;
-//   } else {
-//     console.log("Sorry, no available teachers left");
-//   }
-// };
+let = assignStudent = (studentId, subject) => {
+  const teacher = school.teachers.find((teacher) => {
+    return teacher.subjects.includes(subject);
+  });
+  console.log(teacher);
+  if (teacher.capacityLeft > 0) {
+    teacher.students.push(studentId);
+    teacher.capacityLeft--;
+  } else {
+    console.log("Sorry, no available teachers left");
+  }
+};
 
 let assignTeacherSubject = (teacherId, subject) => {
   
@@ -86,3 +86,5 @@ let assignTeacherSubject = (teacherId, subject) => {
 
 console.log(assignTeacherSubject(1, "sports"));
 console.log(assignTeacherSubject(2, "cooking"));
+
+let assignHouston = ()
