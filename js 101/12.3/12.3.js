@@ -57,34 +57,46 @@ let findPerson = (type, id) => {
 // the teachers are in full capacity log to the console “Sorry,
 // no available teachers left”.
 
-let = assignStudent = (studentId, subject) => {
-  const teacher = school.teachers.find((teacher) => {
+let assignStudent = (studentId, subject) => {
+  const teacher = school.teachers.filter((teacher) => {
     return teacher.subjects.includes(subject);
   });
   console.log(teacher);
-  if (teacher.capacityLeft > 0) {
-    teacher.students.push(studentId);
-    teacher.capacityLeft--;
+  // console.log(teacher[0].capacityLeft);
+
+  if (teacher[0].capacityLeft > 0) {
+    teacher[0].students.push(studentId);
+    teacher[0].capacityLeft--;
   } else {
     console.log("Sorry, no available teachers left");
   }
-};
 
-let assignTeacherSubject = (teacherId, subject) => {
+ console.log(teacher[0])
   
-  const teachId = school.teachers.find((teacher) => {
-    return teacher.id.toString().includes(teacherId);
-  });
-  // console.log(teachId);
-  if (teachId.subjects.includes(subject)) {
-    return teachId
-  } else {
-    teachId.subjects.push(subject)
-  }
-  return teachId;
 };
 
-console.log(assignTeacherSubject(1, "sports"));
-console.log(assignTeacherSubject(2, "cooking"));
+assignStudent(10, "history")
 
-let assignHouston = ()
+// 3. A method called “assignTeachersSubject” that takes two
+// arguments, the teacher’s id, a new subject.
+// Assign the new subject to that particular teacher if that
+// subject doesn’t exist in their array of subjects
+
+
+// let assignTeacherSubject = (teacherId, subject) => {
+  
+//   const teachId = school.teachers.find((teacher) => {
+//     return teacher.id.toString().includes(teacherId);
+//   });
+//   // console.log(teachId);
+//   if (teachId.subjects.includes(subject)) {
+//     return teachId
+//   } else {
+//     teachId.subjects.push(subject)
+//   }
+//   return teachId;
+// };
+
+// console.log(assignTeacherSubject(1, "sports"));
+// console.log(assignTeacherSubject(2, "cooking"));
+
