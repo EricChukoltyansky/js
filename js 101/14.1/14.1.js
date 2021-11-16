@@ -26,6 +26,7 @@ console.log(evenSum);
 
 // console.log(average);
 
+// average version 1
 let sum = grades.reduce((total, currVal) => {
   return total + currVal;
 });
@@ -33,3 +34,13 @@ let sum = grades.reduce((total, currVal) => {
 let average = sum / grades.length;
 
 console.log(average);
+
+// average version 2
+const avrg = grades.reduce((acc, num, index, array) => {
+  acc += num;
+  if (index === array.length - 1) {
+    return acc / array.length;
+  } else {
+    return acc;
+  }
+});
