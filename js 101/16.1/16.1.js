@@ -53,21 +53,30 @@
 // 2, funcC()=>console.log("1"), the last return of funcC() is console.log("2"), because of hoisting it determines the funcC() above it  
 // 2, funcC()=>console.log("2")   
 
-function funcD1() {
-    d = 1;
-   }
-   funcD1();
-   console.log(d);
-   function funcD2() {
-    var e = 1;
-    console.log(e);
-   }
-   funcD2();
+// function funcD1() {
+//     d = 1;
+//    }
+//    funcD1();
+//    console.log(d);
+//    function funcD2() {
+//     var e = 1;
+//     console.log(e);
+//    }
+//    funcD2();
    
 
 // console.log(d) => 1, a number does not have a scope.
 // console.log(e) => undefined
    
+function funcE() {
+    console.log("Value of f in local scope: ", f);
+   }
+   console.log("Value of f in global scope: ", f);
+   var f = 1;
+   funcE();
+
+   // console.log("Value of f in local scope: ", f) =>1, because it's global and hoisted properly
+   // console.log("Value of f in local scope: ", f) =>undefined, because it's not hoisted properly
  
 
 
