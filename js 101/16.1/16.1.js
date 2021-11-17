@@ -28,14 +28,15 @@
 // console.log(obj.prop.getFullName()) will print out Aurelio De Rosa
 // console.log(test()); will print out Aurelio De Rosa since it will get inside the method getFullName => return obj.prop.fullname => "Aurelio De Rosa"
 
-function funcB() {
-    let a = b = 0;
-    a++;
-    return a;
-   }
-   funcB();
-   console.log(typeof a);
-   console.log(typeof b);
+// function funcB() {
+//     let a = b = 0;
+//     a = a+1;
+//     return a,b;
+    
+//    }
+//    funcB();
+//    console.log(typeof a);
+//    console.log(typeof b);
 
 // console.log(typeof a); => number
 // console.log(typeof b); => number
@@ -51,6 +52,22 @@ function funcB() {
 
 // 2, funcC()=>console.log("1"), the last return of funcC() is console.log("2"), because of hoisting it determines the funcC() above it  
 // 2, funcC()=>console.log("2")   
+
+function funcD1() {
+    d = 1;
+   }
+   funcD1();
+   console.log(d);
+   function funcD2() {
+    var e = 1;
+    console.log(e);
+   }
+   funcD2();
+   
+
+// console.log(d) => 1, a number does not have a scope.
+// console.log(e) => undefined
+   
  
 
 
