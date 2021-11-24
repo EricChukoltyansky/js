@@ -23,12 +23,22 @@
     </div>
   </body>
   <script>
-    console.log("hi");
     let startHere = document.querySelector(".start-here");
     startHere.textContent = "Main-title";
-    let ul = document.querySelectorAll("ul")[1];
+    let innerUl = document.querySelectorAll("ul")[1];
+    let outerUl = document.querySelectorAll("ul")[0];
+    let p = document.querySelector("p");
+    innerUl.style.background = "green";
     let li = document.createElement("li");
     li.appendChild(document.createTextNode("sub title 4"));
-    ul.appendChild(li);
+    p.textContent = "This is horrible";
+    innerUl.appendChild(li);
+    // innerUl.removeChild(li);
+    // outerUl.querySelectorAll("li")[0].style.background = "yellow";
+    // outerUl.querySelectorAll("li")[0].textContent = "Master of DOM";
+    // innerUl.querySelectorAll("li")[2].remove() = "Master of DOM";
+    outerUl.firstElementChild.style.background = "yellow";
+    outerUl.firstElementChild.innerText = "Main title";
+    outerUl.firstElementChild.nextElementSibling.nextElementSibling.firstElementChild.children[2].remove();
   </script>
 </html>
