@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emoji maker!</title>
+    <style>
+      .emoji {
+        font-size: large;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #title-emoji {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="title-emoji"></p>
+      <p>How many Emojis do you want to see?</p>
+      <input type="text" />
+      <button type="submit">Submit</button>
+    </div>
+
+    <div class="emoji"></div>
+
+    <script>
+      const emojiArr = [
+        "😅",
+        "🤣",
+        "🤩",
+        "😱",
+        "😡",
+        "😍",
+        "🤪",
+        "🤮",
+        "💩",
+        "😎",
+      ];
+      const sizes = [
+        "xx-large",
+        "medium",
+        "large",
+        "small",
+        "xx-large",
+        "x-large",
+      ];
+
+      document.querySelector("#title-emoji").textContent =
+        emojiArr[Math.floor(Math.random() * 10)];
+      document.querySelector("button").addEventListener("click", createEmojis);
+
+      function createEmojis() {
+        const inputValue = document.querySelector("input").value;
+        if (isNaN(inputValue) || inputValue < 1 || inputValue > 500) {
+          alert("Try again, submit a number between 1 and 500");
+        } else {
+          const emoji = document.querySelector(".emoji");
+          emoji.innerHTML = "";
+
+          for (let i = 0; i < inputValue; i++) {
+            let newEmoji = document.createElement("span");
+            newEmoji.textContent =
+              emojiArr[Math.floor(Math.random() * emojiArr.length)];
+            newEmoji.style.fontSize =
+              sizes[Math.floor(Math.random() * sizes.length)];
+
+            emoji.appendChild(newEmoji);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

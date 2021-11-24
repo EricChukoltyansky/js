@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML DOM Input Text value Property</title>
+  </head>
+
+  <body style="text-align: center">
+    <input type="text" />
+    <button type="submit">Click Please</button>
+    <div class="smile"></div>
+
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        let inputValue = document.querySelector("input").value;
+        if (isNaN(inputValue) || inputValue < 1 || inputValue > 500) {
+          alert("Try again, submit a number between 1 and 500");
+        } else {
+          let smile = document.querySelector(".smile");
+          smile.innerHTML = "";
+          console.log(inputValue);
+
+          for (let i = 0; i < inputValue; i++) {
+            let span = document.createElement("span");
+             span.textContent = "🦧";
+             span.style.fontSize = "xx-large"
+
+            smile.appendChild(span);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
