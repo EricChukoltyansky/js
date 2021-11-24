@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" / >
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+    <a href="#">link</a>
+    <img src="" alt="" />
+    <div class="x">Div with a class</div>
+    <div id="y">Div with an id</div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+  </body>
+  <script>
+    let h1 = document.getElementsByTagName("h1");
+    let p = document.getElementsByTagName("p");
+    let a = document.getElementsByTagName("a");
+    let img = document.getElementsByTagName("img");
+    let x = document.getElementsByClassName(".x");
+    let y = document.getElementsById("#y");
+    let input = document.getElementsByTagNameNS("input");
+    console.log(h1, p, a, x, y, input);
+  </script>
+</html>
