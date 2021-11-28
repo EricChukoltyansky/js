@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .pass {
+      text-align: center;
+    }
+
+    header {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        border: 1px solid black;
+        width: 500px;
+        margin: 0 auto;
+        height: 60px;
+    }
+
+    .square {
+        width: 40px;
+        height: 40px;
+        border: 1px solid black;
+        margin-right: 20px; 
+        justify-content: space-between;
+    }
+  </style>
+  <body>
+    <div class="pass">
+      <header>Password to copy</header>
+      <p class="password">123456</p>
+    </div>
+    <div class="container">
+      <input type='text' class="square" maxlength="1" oninput="valid(this)">
+      <input type='text' class="square" maxlength="1" oninput="valid(this)">
+      <input type='text' class="square" maxlength="1" oninput="valid(this)">
+      <input type='text' class="square" maxlength="1" oninput="valid(this)">
+      <input type='text' class="square" maxlength="1" oninput="valid(this)">
+      <input type='text' class="square" maxlength="1" oninput="valid(this)"> 
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
