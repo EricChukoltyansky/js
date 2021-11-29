@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>The option selected attribute</h1>
+
+    <label for="cars">Choose a car:</label>
+
+    <select id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="vw">VW</option>
+      <option value="audi" selected>Audi</option>
+    </select>
+
+    <div class="me"></div>
+    <script>
+      const all = document.querySelectorAll("option");
+      const select = document.querySelector("select");
+
+      select.addEventListener("change", (e) => {
+        console.log(e.target.value);
+        console.log(select.selectedOptions[0].value);
+      });
+    </script>
+  </body>
+</html>
