@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="" id="" class="ageInput" />
+    <button>Age button</button>
+    <script>
+      console.log("hello");
+      let btn = document.querySelector("button");
+      let input = document.querySelector(".ageInput");
+      let inputValue = input.value;
+      input.addEventListener("input", () => {
+        console.log(input.value);
+      });
+      btn.addEventListener("click", () => {
+        if (input.value >= 18) {
+          alert("You are allowed to drink");
+        } else {
+          alert("F off");
+        }
+      });
+    </script>
+  </body>
+</html>
