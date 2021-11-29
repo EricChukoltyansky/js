@@ -18,7 +18,7 @@
     <div class="counter"></div>
     <div class="message"></div>
 
-    <button>Click me</button>
+    <button disabled>Click me</button>
     <script>
       let textArea = document.querySelector(".text-area");
       let counter = document.querySelector(".counter");
@@ -32,10 +32,16 @@
         const currentLength = target.value.length;
         counter.innerHTML = `${currentLength}/${maxLength}`;
         if (currentLength < 100) {
+          btn.setAttribute('disabled', true);
           message.innerHTML = "You need to write some more";
         } else {
+          btn.removeAttribute('disabled', false)
           message.innerHTML = "You are good to go";
         }
+
+        // while (currentLength < 100) {
+        //   message.innerHTML = "You need to write some more";
+        // }
       });
     </script>
   </body>
