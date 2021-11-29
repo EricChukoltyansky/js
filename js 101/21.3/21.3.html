@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea
+      maxlength="200"
+      rows="10"
+      cols="25"
+      class="text-area"
+      placeholder="Min of 100 characters please"
+    ></textarea>
+
+    <div class="counter"></div>
+    <div class="message"></div>
+
+    <button>Click me</button>
+    <script>
+      let textArea = document.querySelector(".text-area");
+      let counter = document.querySelector(".counter");
+      let message = document.querySelector(".message");
+      let btn = document.querySelector("button");
+
+      textArea.addEventListener("input", (e) => {
+        const target = e.target;
+        const maxLength = target.getAttribute("maxlength");
+        console.log(maxLength);
+        const currentLength = target.value.length;
+        counter.innerHTML = `${currentLength}/${maxLength}`;
+        if (currentLength < 100) {
+          message.innerHTML = "You need to write some more";
+        } else {
+          message.innerHTML = "You are good to go";
+        }
+      });
+    </script>
+  </body>
+</html>
