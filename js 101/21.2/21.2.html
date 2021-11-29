@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="inc">+</button>
+    <div>Joe Rogan is Awesome</div>
+    <button class="dec">-</button>
+    <script>
+      let btnInc = document.querySelector(".inc");
+      let btnDec = document.querySelector(".dec");
+
+      btnInc.addEventListener("click", increaseFontSize);
+      btnDec.addEventListener("click", decreaseFontSize);
+
+      function increaseFontSize() {
+        let text = document.querySelector("div");
+        console.log(text);
+        let style = window.getComputedStyle(text).getPropertyValue("font-size");
+        console.log(style);
+        let currentSize = parseFloat(style);
+        console.log(currentSize);
+        text.style.fontSize = currentSize + 1 + "px";
+      }
+
+      function decreaseFontSize() {
+        let text = document.querySelector("div");
+        let style = window.getComputedStyle(text).getPropertyValue("font-size");
+        let currentSize = parseFloat(style);
+        text.style.fontSize = currentSize - 1 + "px";
+      }
+    </script>
+  </body>
+</html>
