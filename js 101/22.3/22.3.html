@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    .valid {
+      color: red;
+    }
+
+    div {
+      padding-top: 20px;
+    }
+
+    .invalid {
+      border: 2px black solid;
+      height: 100px;
+      width: 100px;
+      z-index: 20;
+      display: none;
+    }
+
+    .corect {
+      border: 2px solid green;
+      height: 100px;
+      width: 100px;
+      z-index: 20;
+      display: none;
+    }
+
+    .wrong {
+      border: 2px solid red;
+      height: 100px;
+      width: 100px;
+      z-index: 20;
+      display: none;
+    }
+
+    button {
+      display: none;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    <h1>Guess the letter</h1>
+    <p class="asterisk">*</p>
+    <p class="message">Guess a letter</p>
+    <div>Keys guessed</div>
+    <div class="guessed-letters"></div>
+    <button>Yes!</button>
+    
+
+    <script src="/22.3.js"></script>
+  </body>
+</html>
