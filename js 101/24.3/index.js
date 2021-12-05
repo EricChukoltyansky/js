@@ -13,5 +13,21 @@ Array.prototype.myCustomFilter = function (fn) {
 };
 
 const filteredData = data.myCustomFilter(function (el) {
-    if (el > 2) return el;
-  });
+  if (el > 2) return el;
+});
+
+console.log(filteredData);
+
+Array.prototype.myCustomFind = function (fn) {
+  for (let i = 0; i < this.length; i++) {
+    if (fn(this[i])) {
+      return this[i];
+    }
+  }
+};
+
+const foundData = data.myCustomFind(function (el) {
+  if (el > 2) return el;
+});
+
+console.log(foundData);
