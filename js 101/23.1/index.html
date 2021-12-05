@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="clock"></div>
+    <script>
+      let div = document.querySelector(".clock");
+
+      let time = {
+        s: new Date().getSeconds(),
+        m: new Date().getMinutes(),
+        h: new Date().getHours(),
+        fullHour() {
+          const { s, m, h } = this;
+          setInterval(() => div.textContent = `${h}:${m}:${s}`, 1000);
+          
+        },
+      };
+
+      
+
+      setInterval(time.fullHour(),1000)
+    </script>
+  </body>
+</html>
