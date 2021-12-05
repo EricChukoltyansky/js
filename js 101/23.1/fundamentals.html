@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <script>
+      //  1. console.log(this); It will point to the global window.
+
+      // 2.
+      const myObj = {
+        name: "Timmy",
+        greet: () => {
+          console.log(`Hello ${this.name}`);
+        },
+      };
+      myObj.greet();
+
+      //  It will point to the global window object because it is an arrow function,
+      // arrow functions don't bind their own scope, but inherit it from the parent one, which in this case is window or the global object.
+      // We can fix this by changing the method to a regular function expression.
+
+      3;
+      const myFuncDec = function () {
+        console.log(this);
+      };
+
+      //    It will point to the global window object because it is a function invocation
+
+      4;
+      const myFuncArrow = () => {
+        console.log(this);
+      };
+      myFuncArrow();
+
+    //   It will point to the global window object beacuse it is an arrow function
+    </script>
+  </body>
+</html>
