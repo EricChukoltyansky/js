@@ -12,6 +12,11 @@ Pokemon.prototype.callPokemon = function () {
   return `I choose you ${this.name}`;
 };
 
+Pokemon.prototype.attack = function() {
+    return `${this.name} attacked with ${this.attackList[1]}  `
+}
+
 let poko = new Pokemon('charizard', 'fire', 'fly');
 
 console.log(charmander.callPokemon())
+console.log(charmander.attack())
