@@ -14,10 +14,11 @@ const getJoke = () => {
     },
   })
     .then((res) => res.json())
-    .then(
-      (data) => (titleHolder.textContent = data.contents.jokes[0].joke.title)
-    )
-    .then((data) => (jokeHolder.textContent = data.contents.jokes[0].joke.text))
+    .then((data) => {
+      titleHolder.textContent = data.contents.jokes[0].joke.title;
+      jokeHolder.textContent = data.contents.jokes[0].joke.text;
+    })
+
     .catch((err) => (jokeHolder.textContent = "Try again"));
 };
 
