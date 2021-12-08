@@ -2,8 +2,10 @@ const button = document.querySelector("button");
 let userName = document.querySelector("section .user-name");
 let image = document.querySelector("section .image-container");
 let repoNumber = document.querySelector("section .repo-number");
+const input = document.querySelector("input");
 
 let getFetch = async () => {
+  input.focus();
   const val = document.querySelector("input").value;
   console.log(val);
   userName.textContent = "Searching.. Please Hold you horses";
@@ -20,7 +22,7 @@ let getFetch = async () => {
     image.style.backgroundImage = `url("${data.avatar_url}")`;
     repoNumber.textContent = data.public_repos;
   } catch {
-    userName.textContent = "No such user";
+    userName.textContent = `Error number: ${data.status}, user not found`;
     image.style.backgroundImage = "No such user image";
     repoNumber.textContent = "No such user repos";
   }
