@@ -1,0 +1,40 @@
+h1,
+section {
+  text-align: center;
+}
+
+body {
+    background-image: url('/253840854_429386221889494_8825506620502492303_n.jpg');
+    background-size: cover;
+}
+
+.user-name {
+  margin-top: 30px;
+  font-size: 24px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+section p {
+    font-size: 24px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif; 
+}
+
+.image-container {
+  border: 1px solid gray;
+  width: 200px;
+  height: 350px;
+  margin: 0 auto;
+  border-radius: 25px;
+  margin-top: 50px;
+  background-size: cover;
+  background-position: center;
+}
+
+.repo-number {
+  margin-top: 30px;
+  font-size: 24px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
